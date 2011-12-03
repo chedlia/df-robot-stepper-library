@@ -29,9 +29,11 @@ class Df_stepper {
      void setSpeed(uint16_t);
      uint8_t onestep(uint8_t dir, uint8_t style);
      void release(void);
-     uint16_t stepsPerRev; // # steps per revolution
+     void stopMotor(void);	
+     int getCurrentStep(void);
+     uint32_t stepsPerRev; // # steps per revolution
      uint8_t steppernum;
-     uint32_t microsecs_per_step, steppingcounter;
+     uint32_t millisecs_per_step, steppingcounter;
      //void Step0();
      //void Step1();
      //void Step2();
